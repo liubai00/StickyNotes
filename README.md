@@ -2,6 +2,12 @@
 
 一个简单的桌面便签：每张便签是一个半透明的小窗口，只记文字，输入即自动保存。
 
+## 下载（Windows）
+
+**[StickyNotes-Portable-1.1.0.exe](https://github.com/liubai00/StickyNotes/raw/main/download/StickyNotes-Portable-1.1.0.exe)**：便携版，下载后双击即可运行，不用安装。
+
+程序没有数字签名，第一次运行时 Windows 可能提示“Windows 已保护你的电脑”，点“更多信息” → “仍要运行”即可。
+
 ## 使用
 
 按钮平时隐藏，鼠标移到便签上才会出现。
