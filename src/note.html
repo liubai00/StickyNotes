@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'none'; style-src 'self'; script-src 'self'"
+    />
+    <title>便签</title>
+    <link rel="stylesheet" href="note.css" />
+  </head>
+  <body>
+    <main class="note">
+      <header class="bar">
+        <button id="new" type="button" title="新建便签 (Ctrl+N)" aria-label="新建便签">
+          <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 3v10M3 8h10" /></svg>
+        </button>
+        <span class="spacer"></span>
+        <button id="pin" type="button" title="置顶" aria-label="置顶" aria-pressed="false">
+          <svg viewBox="0 0 16 16" aria-hidden="true">
+            <path d="M9.6 2.4l4 4-2.1.6-2 2 .2 2.9-1 1-5.6-5.6 1-1 2.9.2 2-2z" />
+            <path d="M5.6 10.4l-3.2 3.2" />
+          </svg>
+        </button>
+        <button id="delete" type="button" title="删除便签" aria-label="删除便签">
+          <svg viewBox="0 0 16 16" aria-hidden="true">
+            <path d="M3 4.5h10M6.5 4.5V3h3v1.5M4.5 4.5l.6 8.5h5.8l.6-8.5M6.8 7v3.5M9.2 7v3.5" />
+          </svg>
+        </button>
+      </header>
+
+      <textarea id="text" placeholder="写点什么…" spellcheck="false" aria-label="便签内容"></textarea>
+    </main>
+
+    <script src="note.js"></script>
+  </body>
+</html>

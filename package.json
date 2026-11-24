@@ -1,0 +1,55 @@
+{
+  "name": "sticky-notes",
+  "productName": "便签",
+  "version": "1.1.0",
+  "description": "简洁的桌面便签：只记文字，自动保存",
+  "main": "src/main.js",
+  "private": true,
+  "license": "MIT",
+  "author": "StickyNotes",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^45.4.1",
+    "electron-builder": "^26.18.0"
+  },
+  "build": {
+    "appId": "local.sticky-notes",
+    "productName": "便签",
+    "executableName": "StickyNotes",
+    "artifactName": "StickyNotes-${version}-${os}-${arch}.${ext}",
+    "files": [
+      "src/**",
+      "assets/icon.png",
+      "package.json"
+    ],
+    "icon": "assets/icon.png",
+    "electronLanguages": [
+      "zh-CN",
+      "en-US"
+    ],
+    "compression": "maximum",
+    "win": {
+      "target": [
+        "nsis",
+        "portable"
+      ]
+    },
+    "nsis": {
+      "artifactName": "StickyNotes-Setup-${version}.${ext}"
+    },
+    "portable": {
+      "artifactName": "StickyNotes-Portable-${version}.${ext}"
+    },
+    "mac": {
+      "target": "dmg",
+      "category": "public.app-category.productivity"
+    },
+    "linux": {
+      "target": "AppImage",
+      "category": "Utility"
+    }
+  }
+}
